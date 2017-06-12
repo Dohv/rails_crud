@@ -1,0 +1,225 @@
+Started GET "/" for 127.0.0.1 at 2017-06-08 17:43:09 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 250ms (Views: 9.4ms)
+
+
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (24.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1861140426820425240);[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTodos (20170608215403)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.6ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170608215403"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-08 21:54:52.474096"], ["updated_at", "2017-06-08 21:54:52.474096"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1861140426820425240)[0m
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-06-08 17:55:28 -0400
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTodo Load (8.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.3ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "test1"], ["created_at", "2017-06-08 22:23:36.921742"], ["updated_at", "2017-06-08 22:23:36.921742"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (3.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.7ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "test2"], ["created_at", "2017-06-08 22:27:05.990567"], ["updated_at", "2017-06-08 22:27:05.990567"]]
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (7.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "homework"], ["created_at", "2017-06-08 22:27:44.065644"], ["updated_at", "2017-06-08 22:27:44.065644"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Fix up projects."], ["created_at", "2017-06-08 22:34:15.107824"], ["updated_at", "2017-06-08 22:34:15.107824"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Talk through final project with instrctors."], ["created_at", "2017-06-08 22:34:15.117416"], ["updated_at", "2017-06-08 22:34:15.117416"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Complete rails CRUD app."], ["created_at", "2017-06-08 22:34:15.119383"], ["updated_at", "2017-06-08 22:34:15.119383"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Go through SQL docs to learn about joins."], ["created_at", "2017-06-08 22:34:15.121208"], ["updated_at", "2017-06-08 22:34:15.121208"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Go through the Pubnub website to learn how to impliment the service in final project"], ["created_at", "2017-06-08 22:34:15.123007"], ["updated_at", "2017-06-08 22:34:15.123007"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (3.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/index" for 127.0.0.1 at 2017-06-08 18:44:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-06-08 18:45:02 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todos" for 127.0.0.1 at 2017-06-08 18:45:07 -0400
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (27.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 64ms (Views: 14.0ms | ActiveRecord: 41.4ms)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1861140426820425240);[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBackgrounds (20170609162439)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE TABLE "backgrounds" ("id" bigserial primary key, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170609162439"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1861140426820425240)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-06-10 20:57:07 -0400
+  [1m[35m (24.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (24.2ms)
+Completed 200 OK in 42ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-10 21:08:07 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Dovstokar/.rvm/gems/ruby-2.4.0@global/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (34.0ms)
+Completed 200 OK in 51ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todos" for ::1 at 2017-06-10 21:16:51 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (18.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 51ms (Views: 13.1ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2017-06-10 21:16:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/todos" for ::1 at 2017-06-10 21:33:43 -0400
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (6.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 118ms (Views: 93.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/todos/show" for ::1 at 2017-06-11 08:52:13 -0400
+Processing by TodosController#show as HTML
+  [1m[36mTodo Load (30.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 168ms (Views: 2.5ms | ActiveRecord: 56.7ms)
+
+
+Started GET "/todos/index" for ::1 at 2017-06-11 08:52:22 -0400
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (21.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 30ms (Views: 8.0ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/todos/show/1" for ::1 at 2017-06-11 08:52:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/todos/show/1"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/todos/1" for ::1 at 2017-06-11 08:52:41 -0400
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (30.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 0.7ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/todos" for ::1 at 2017-06-11 08:57:31 -0400
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (10.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 95ms (Views: 72.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/todos" for ::1 at 2017-06-11 15:32:53 -0400
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (32.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 110ms (Views: 71.5ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/todos" for ::1 at 2017-06-11 15:33:19 -0400
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (6.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Completed 200 OK in 74ms (Views: 67.2ms | ActiveRecord: 6.7ms)
+
+
